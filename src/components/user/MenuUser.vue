@@ -2,10 +2,8 @@
 
     
    <div>
-    <div>nguyenvancong.dev</div>
-    <router-link to="/">Trang Chủ</router-link> 
-    <router-link to="/user/posts">Bài Đăng</router-link> 
-    <router-link to="/login">Login</router-link> 
+    <h1 class="text-center bg-blue-accent-2">QŨY TÍN DỤNG NHÂN DÂN XÃ LIÊN THÀNH</h1>
+    <h4 class="text-center">Cầu Thông - Xã Liên Thành - Yên Thành</h4>
    
    
    </div>
