@@ -1,4 +1,5 @@
 <template>
+   <div class="main">
     <div class="bg-blue-accent-2">
 
       <v-container class="d-flex align-center justify-center ">
@@ -6,7 +7,7 @@
       <image src="../../../public/favicon.ico" />
     </div>
      <div>
-       <h1 class="text-center color-yellow">QŨY TÍN DỤNG NHÂN DÂN XÃ LIÊN THÀNH</h1>
+       <h1 class="text-center font-bold text-yellow-300">QŨY TÍN DỤNG NHÂN DÂN XÃ LIÊN THÀNH</h1>
        <h4 class="text-center">Cầu Thông - Xã Liên Thành - Yên Thành - phone 097.1989.288</h4>   
       </div>
       <v-btn class="bg-red">NỘP HỒ SƠ VAY TRỰC TUYẾN</v-btn>
@@ -15,7 +16,7 @@
 
     <div class="bg-blue-accent-2 d-flex justify-space-between align-center">
       <div>TIME</div>
-      <div>Cảm ơn quý khách đã ghé thăm website của chúng tôi </div>
+      <div class="animate-bounce delay-75">Cảm ơn quý khách đã ghé thăm website của chúng tôi </div>
       <div clas="d-flex">
         <v-input placeholder="Email"/>
         <v-input placeholder="Mật khẩu"/>
@@ -93,33 +94,31 @@
     <div class="bg-blue-accent-2">
 
       <v-container>
-        <div class="d-flex justify-space-between">
+        <div class="d-flex justify-space-between font-weight-bold">
           <div class="d-flex">
-            <div>Trang chủ</div>
-            <div>Giới thiệu</div>
-            <div>Điều khoản thỏa thuận</div>
-            <div>Chính sách bảo mật</div>
-            <div>Liên hệ</div>
-            <div>Sơ đồ trang</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Trang chủ</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Giới thiệu</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Điều khoản thỏa thuận</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Chính sách bảo mật</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Liên hệ</div>
+            <div class="py-2 px-3 hover:cursor-pointer hover:text-orange-600">Sơ đồ trang</div>
           </div>
-          <div>Email nội bộ</div>
+          <div class="py-2 px-3  hover:cursor-pointer hover:text-orange-600">Email nội bộ</div>
         </div>
+      </v-container>
+    </div>
+    <div class="bg-blue-accent-2">
+      <v-container>  
         <div>
-            QUỸ TÍN DỤNG NHÂN DÂN XÃ LIÊN THÀNH - GIÁ TRỊ MỚI
+            <h1 class="font-weight-bold">QUỸ TÍN DỤNG NHÂN DÂN XÃ LIÊN THÀNH - GIÁ TRỊ MỚI </h1>
         </div>
-        <div>
-            Trụ sở: Cầu Thông - xã Liên Thành - Yên Thành - Nghệ An
+        <div class="mt-2">
+            <span class="text-bold">Trụ sở: </span>Cầu Thông - xã Liên Thành - Yên Thành - Nghệ An
         </div>
-        <div>
-          <v-input
-          :messages="['Messages']"
-          append-icon="mdi-close"
-          prepend-icon="mdi-phone"
-        >  097.1989.288
-        </v-input>
-        </div>
+        <div>Điện thoại: 097.1989.288</div>
     
       </v-container>
+    </div>
     </div>
    </template>
 
@@ -141,6 +140,8 @@
    
    }
    </script>
+  <style  scoped>
+  </style>
    
  
  

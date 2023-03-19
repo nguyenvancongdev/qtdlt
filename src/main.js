@@ -5,6 +5,8 @@ import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 import CKEditor from '@ckeditor/ckeditor5-vue';
 import Vuex from 'vuex'
+import './index.css'
+
 
 loadFonts()
 
