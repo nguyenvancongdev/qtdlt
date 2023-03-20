@@ -1,6 +1,6 @@
 <template>
    <div class="main">
-    <div class="bg-blue-accent-2">
+    <div class="bg-blue-accent-2 ">
 
       <v-container class="d-flex align-center justify-center ">
         <div>
