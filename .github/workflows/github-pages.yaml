@@ -14,5 +14,5 @@ jobs:
       with:
         username: 'nguyenvancongdev'
         reponame: 'qtdlt'
-        token: ${{ secrets.TOKEN }}
+        token: ${{ secrets.ACCESS_TOKEN }}
         cname: 'qtdlt.congnguyen.dev'
