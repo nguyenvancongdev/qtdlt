@@ -7,6 +7,26 @@ import LoginAdmin from '@/views/login/index'
 
 import * as VueRouter from 'vue-router'
 
+import AdminTai from "@/layouts/Admin.vue";
+import AuthTai from "@/layouts/Auth.vue";
+
+// views for Admin layout
+
+import DashboardTai from "@/views/admin/Dashboard.vue";
+import SettingsTai from "@/views/admin/Settings.vue";
+import TablesTai from "@/views/admin/Tables.vue";
+import MapsTai from "@/views/admin/Maps.vue";
+
+// views for Auth layout
+
+import LoginTai from "@/views/auth/LoginTai.vue";
+import RegisterTai from "@/views/auth/RegisterTai.vue";
+
+// views without layouts
+
+import LandingTai from "@/views/Landing.vue";
+import ProfileTai from "@/views/Profile.vue";
+import IndexTai from "@/views/Index.vue";
 
   const routes = [ 
     {
@@ -14,13 +34,13 @@ import * as VueRouter from 'vue-router'
       component: UserScreen, 
       children: [
         {
-          path: 'posts',
+          path: 'post',
           component: HelloWorld,
         },
       ],
     },
     {
-      path: '/admin', 
+      path: '/admins', 
       component: UserScreen, 
       children: [
         {
@@ -35,6 +55,57 @@ import * as VueRouter from 'vue-router'
     {path: '/', redirect: '/user/posts', name:'home'},
     { path: '/:pathMatch(.*)*',  redirect: '/404' },
     { path: '/404',name: 'NotFound', component: NotFound },
+    {
+      path: "/admin",
+      redirect: "/admin/dashboard",
+      component: AdminTai,
+      children: [
+        {
+          path: "/admin/dashboard",
+          component: DashboardTai,
+        },
+        {
+          path: "/admin/settings",
+          component: SettingsTai,
+        },
+        {
+          path: "/admin/tables",
+          component: TablesTai,
+        },
+        {
+          path: "/admin/maps",
+          component: MapsTai,
+        },
+      ],
+    },
+    {
+      path: "/auth",
+      redirect: "/auth/login",
+      component: AuthTai,
+      children: [
+        {
+          path: "/auth/login",
+          component: LoginTai,
+        },
+        {
+          path: "/auth/register",
+          component: RegisterTai,
+        },
+      ],
+    },
+    {
+      path: "/landing",
+      component: LandingTai,
+    },
+    {
+      path: "/profile",
+      component: ProfileTai,
+    },
+    {
+      path: "/",
+      component: IndexTai,
+    },
+    { path: "/:pathMatch(.*)*", redirect: "/" },
     
   ]
   const router = VueRouter.createRouter({
