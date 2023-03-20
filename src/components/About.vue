@@ -1,5 +1,5 @@
 <template> 
-    helo chao anh rem, toi la cong, test
+    helo chao anh em, toi la cong, test
    </template>
    
    <script>
