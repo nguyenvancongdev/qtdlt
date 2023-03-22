@@ -29,6 +29,8 @@ import ProfileTai from "@/views/Profile.vue";
 import IndexTai from "@/views/Index.vue";
 
   const routes = [ 
+    {path: '/', redirect: '/user/post', name:'home'},
+
     {
       path: '/user', 
       component: UserScreen, 
@@ -52,7 +54,6 @@ import IndexTai from "@/views/Index.vue";
     {
       path: '/login', component: LoginAdmin,
     },
-    {path: '/', redirect: '/user/posts', name:'home'},
     { path: '/:pathMatch(.*)*',  redirect: '/404' },
     { path: '/404',name: 'NotFound', component: NotFound },
     {
