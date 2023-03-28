@@ -123,7 +123,7 @@
                   class="fas fa-tools mr-2 text-sm"
                   :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"
                 ></i>
-                Settings
+                Sản phẩm vay
               </a>
             </router-link>
           </li>

@@ -7,7 +7,7 @@ import LoginAdmin from '@/views/login/index'
 
 import * as VueRouter from 'vue-router'
 
-import AdminTai from "@/layouts/Admin.vue";
+import AdminTai from "@/pages/admin";
 import AuthTai from "@/layouts/Auth.vue";
 
 // views for Admin layout
