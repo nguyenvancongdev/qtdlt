@@ -38,7 +38,7 @@ import IndexTai from "@/views/Index.vue";
         {
           path: 'post',
           component: HelloWorld,
-          name: 'admin'
+          name: 'admin-hello'
         },
       ],
     },
