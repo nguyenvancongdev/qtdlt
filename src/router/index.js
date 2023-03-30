@@ -1,11 +1,11 @@
 
+import * as VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 // import AboutToi from '@/components/About'
-import UserScreen from '@/views/user/index'
+import UserScreen from '@/pages/p/index'
 import NotFound from '@/views/404/index'
 import LoginAdmin from '@/views/login/index'
 
-import * as VueRouter from 'vue-router'
 
 import AdminTai from "@/pages/admin";
 import AuthTai from "@/layouts/Auth.vue";
@@ -29,15 +29,16 @@ import ProfileTai from "@/views/Profile.vue";
 import IndexTai from "@/views/Index.vue";
 
   const routes = [ 
-    {path: '/', redirect: '/user/post', name:'home'},
+    {path: '/', alias: '/p', name:'home'},
 
     {
-      path: '/user', 
+      path: '/p', 
       component: UserScreen, 
       children: [
         {
           path: 'post',
           component: HelloWorld,
+          name: 'admin'
         },
       ],
     },
