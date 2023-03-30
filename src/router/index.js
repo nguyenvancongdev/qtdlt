@@ -3,7 +3,7 @@ import * as VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 // import AboutToi from '@/components/About'
 import UserScreen from '@/pages/p/index'
-import NotFound from '@/views/404/index'
+import NotFound from '@/pages/404/index'
 import LoginAdmin from '@/pages/login/index'
 
 
