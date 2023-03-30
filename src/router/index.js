@@ -4,11 +4,10 @@ import HelloWorld from '@/components/HelloWorld'
 // import AboutToi from '@/components/About'
 import UserScreen from '@/pages/p/index'
 import NotFound from '@/views/404/index'
-import LoginAdmin from '@/views/login/index'
+import LoginAdmin from '@/pages/login/index'
 
 
 import AdminTai from "@/pages/admin";
-import AuthTai from "@/layouts/Auth.vue";
 
 // views for Admin layout
 
@@ -19,14 +18,10 @@ import MapsTai from "@/views/admin/Maps.vue";
 
 // views for Auth layout
 
-import LoginTai from "@/views/auth/LoginTai.vue";
-import RegisterTai from "@/views/auth/RegisterTai.vue";
 
 // views without layouts
 
-import LandingTai from "@/views/Landing.vue";
-import ProfileTai from "@/views/Profile.vue";
-import IndexTai from "@/views/Index.vue";
+
 
   const routes = [ 
     {path: '/', alias: '/p', name:'home'},
@@ -80,34 +75,8 @@ import IndexTai from "@/views/Index.vue";
         },
       ],
     },
-    {
-      path: "/auth",
-      redirect: "/auth/login",
-      component: AuthTai,
-      children: [
-        {
-          path: "/auth/login",
-          component: LoginTai,
-        },
-        {
-          path: "/auth/register",
-          component: RegisterTai,
-        },
-      ],
-    },
-    {
-      path: "/landing",
-      component: LandingTai,
-    },
-    {
-      path: "/profile",
-      component: ProfileTai,
-    },
-    {
-      path: "/",
-      component: IndexTai,
-    },
-    { path: "/:pathMatch(.*)*", redirect: "/" },
+
+
     
   ]
   const router = VueRouter.createRouter({
