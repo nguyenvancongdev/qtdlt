@@ -16,10 +16,10 @@ export default {
     a: 0,
     nga: 0,
     editor: ClassicEditor,
-                editorData: '<p>Content of the editor.</p>',
-                editorConfig: {
-                    // The configuration of the editor.
-                }
+    editorData: '<p>Content of the editor.</p>',
+    editorConfig: {
+    // The configuration of the editor.
+    }
 
   }},
   methods:{

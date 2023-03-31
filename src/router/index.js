@@ -11,10 +11,10 @@ import AdminTai from "@/pages/admin";
 
 // views for Admin layout
 
-import DashboardTai from "@/views/admin/Dashboard.vue";
-import SettingsTai from "@/views/admin/Settings.vue";
-import TablesTai from "@/views/admin/Tables.vue";
-import MapsTai from "@/views/admin/Maps.vue";
+import DashboardTai from "@/pages/admin/components/Dashboard.vue";
+import SettingsTai from "@/pages/admin/components/Settings.vue";
+import TablesTai from "@/pages/admin/components/Tables.vue";
+import MapsTai from "@/pages/admin/components/Maps.vue";
 
 // views for Auth layout
 

@@ -2,20 +2,7 @@
 
     <header-user />
     <div>
-    <div class="bg-red-lighten-5">
-      <v-container >
-        <div>
-
-          <v-text-field placeholder="Nhập từ khóa tìm kiếm..." width="100px" />
-          <v-btn type="submit" class="mt-2">Tìm kiếm</v-btn>
-        </div>
-        <div>
-          <v-btn>Cho vay vốn</v-btn>
-          <v-btn>Gửi tiếc kiệm</v-btn>
-          <v-btn>Dịch vụ khác</v-btn>
-        </div>
-      </v-container>
-    </div>
+  
     <v-container>
       <div class="d-flex justify-space-between ">
         <div>
