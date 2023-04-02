@@ -1,7 +1,6 @@
 
 import * as VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-// import AboutToi from '@/components/About'
 import UserScreen from '@/pages/p/index'
 import NotFound from '@/pages/404/index'
 import LoginAdmin from '@/pages/login/index'
@@ -24,7 +23,7 @@ import MapsTai from "@/pages/admin/components/Maps.vue";
 
 
   const routes = [ 
-    {path: '/', alias: '/p', name:'home'},
+    {path: '/', component: UserScreen},
 
     {
       path: '/p', 
@@ -38,19 +37,8 @@ import MapsTai from "@/pages/admin/components/Maps.vue";
       ],
     },
     {
-      path: '/admins', 
-      component: UserScreen, 
-      children: [
-        {
-          path: 'posts',
-          component: HelloWorld, name: 'toi'
-        },
-      ],
-    },
-    {
       path: '/login', component: LoginAdmin,
     },
-    { path: '/:pathMatch(.*)*',  redirect: '/404' },
     { path: '/404',name: 'NotFound', component: NotFound },
     {
       path: "/admin",
@@ -75,6 +63,7 @@ import MapsTai from "@/pages/admin/components/Maps.vue";
         },
       ],
     },
+    { path: '/:pathMatch(.*)*',  redirect: '/404' },
 
 
     
