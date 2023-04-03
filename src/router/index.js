@@ -10,10 +10,9 @@ import AdminTai from "@/pages/admin";
 
 // views for Admin layout
 
-import DashboardTai from "@/pages/admin/components/Dashboard.vue";
-import SettingsTai from "@/pages/admin/components/Settings.vue";
-import TablesTai from "@/pages/admin/components/Tables.vue";
-import MapsTai from "@/pages/admin/components/Maps.vue";
+import DashBoard from "@/pages/admin/Dashboard";
+import TienGui from "@/pages/admin/san-pham/tien-gui";
+import ChoVay from "@/pages/admin/san-pham/cho-vay";
 
 // views for Auth layout
 
@@ -36,9 +35,6 @@ import MapsTai from "@/pages/admin/components/Maps.vue";
         },
       ],
     },
-    {
-      path: '/login', component: LoginAdmin,
-    },
     { path: '/404',name: 'NotFound', component: NotFound },
     {
       path: "/admin",
@@ -47,24 +43,23 @@ import MapsTai from "@/pages/admin/components/Maps.vue";
       children: [
         {
           path: "/admin/dashboard",
-          component: DashboardTai,
+          component: DashBoard,
         },
         {
-          path: "/admin/settings",
-          component: SettingsTai,
+          path: "/admin/san-pham/tien-gui",
+          component: TienGui,
         },
         {
-          path: "/admin/tables",
-          component: TablesTai,
-        },
-        {
-          path: "/admin/maps",
-          component: MapsTai,
+          path: "/admin/san-pham/cho-vay",
+          component: ChoVay,
         },
       ],
     },
+    {
+      path: '/login', component: LoginAdmin,
+    },
     { path: '/:pathMatch(.*)*',  redirect: '/404' },
-
+    
 
     
   ]

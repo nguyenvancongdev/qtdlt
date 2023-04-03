@@ -1,11 +1,8 @@
-<template>
-    <div>
-     day la san pham tien gui
-    </div>
+  <template>
+   hello day la
   </template>
   <script>
-
   export default {
-    name: "admin-layout",
+    name: "SanPham",
   };
   </script>

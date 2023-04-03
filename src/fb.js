@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDFYmsztLtrVrm3nHVgj96MfK_gwqu0d34",
-    authDomain: "vuejs-demo-d773e.firebaseapp.com",
-    projectId: "vuejs-demo-d773e",
-    storageBucket: "vuejs-demo-d773e.appspot.com",
-    messagingSenderId: "684138343077",
-    appId: "1:684138343077:web:89db6beb17b16393f8fb4c",
-    measurementId: "G-LN43WPS0K7"
+  apiKey: "AIzaSyDt1ejlNDOhQn4CY-vD4H0yHlVExhsS3JA",
+  authDomain: "qtdlt-quytindung.firebaseapp.com",
+  projectId: "qtdlt-quytindung",
+  storageBucket: "qtdlt-quytindung.appspot.com",
+  messagingSenderId: "605211877327",
+  appId: "1:605211877327:web:d19b692b27236644617cba",
+  measurementId: "G-JD483J7V1P"
   };
   const firebase = initializeApp(firebaseConfig)
 
