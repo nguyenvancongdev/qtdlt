@@ -1,4 +1,4 @@
-<template>
+  <template>
     <san-pham sanpham="tien-gui" />
   </template>
   <script>
