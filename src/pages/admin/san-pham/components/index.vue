@@ -1,5 +1,5 @@
   <template>
-   hello day la
+   hello day la san pham
   </template>
   <script>
   export default {
