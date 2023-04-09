@@ -13,6 +13,8 @@ import AdminTai from "@/pages/admin";
 import DashBoard from "@/pages/admin/Dashboard";
 import TienGui from "@/pages/admin/san-pham/tien-gui";
 import ChoVay from "@/pages/admin/san-pham/cho-vay";
+import GroupPost from "@/pages/admin/group-post";
+
 
 // views for Auth layout
 
@@ -53,11 +55,16 @@ import ChoVay from "@/pages/admin/san-pham/cho-vay";
           path: "/admin/san-pham/cho-vay",
           component: ChoVay,
         },
+        {
+          path: "/admin/group-post",
+          component: GroupPost,
+        },
       ],
     },
     {
       path: '/login', component: LoginAdmin,
     },
+    { path: '/:pathMatch(.*)*', component: NotFound },
     { path: '/:pathMatch(.*)*',  redirect: '/404' },
     
 
