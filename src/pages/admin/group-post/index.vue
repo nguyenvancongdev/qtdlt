@@ -26,6 +26,13 @@
       >
         Tìm kiếm
       </v-btn>
+      <v-btn
+        color="primary"
+        class="mt-2"
+        @click="getAll"
+      >
+        Get all
+      </v-btn>
     </div>
   </v-form>
 
@@ -43,6 +50,7 @@
 </v-sheet>
 </template>
 <script>
+// import {getAll} from '@/controller/index'
 export default {
   name: "GroupPost",
   data: () => ({
@@ -139,6 +147,13 @@ export default {
         },
       ],
     }),
+    methods: {
+      getAll(){
+
+        let a = 'kjj'
+        console.log('99',a)
+       }
+      }
 };
 </script>
 
