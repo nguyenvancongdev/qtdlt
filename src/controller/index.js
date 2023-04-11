@@ -1,27 +1,14 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDt1ejlNDOhQn4CY-vD4H0yHlVExhsS3JA",
-  authDomain: "qtdlt-quytindung.firebaseapp.com",
-  projectId: "qtdlt-quytindung",
-  storageBucket: "qtdlt-quytindung.appspot.com",
-  messagingSenderId: "605211877327",
-  appId: "1:605211877327:web:d19b692b27236644617cba",
-  measurementId: "G-JD483J7V1P"
-  };
-  const firebase = initializeApp(firebaseConfig)
+import { collection, getDocs } from 'firebase/firestore'
+import db from '@/fb'
 
-  const db = getFirestore(firebase);
-
-// const connect = (row) => (db.collection(row))
-const getAll =  () => {
-    // let connects = connect('group')
-    // let getalldata = await connects.get()
-    // return getalldata
-   return db
+export const getAll = async() => {   
+     const citiesCol = collection(db, 'group');
+     const citySnapshot = await getDocs(citiesCol);
+     return citySnapshot
 }
-module.exports.getAll = getAll
+
+
 // module.exports.updateone = async ({row, id, data}) => {
 //     let connects= connect(row)
 //     let get_rowid = connects.doc(id)
