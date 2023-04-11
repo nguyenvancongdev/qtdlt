@@ -5,9 +5,9 @@ import db from '@/fb'
 export const getAll = async() => {   
      const citiesCol = collection(db, 'group');
      const citySnapshot = await getDocs(citiesCol);
+     console.log(citySnapshot)
      return citySnapshot
 }
-
 
 // module.exports.updateone = async ({row, id, data}) => {
 //     let connects= connect(row)
