@@ -26,6 +26,20 @@
       >
         Get all
       </v-btn>
+      <v-btn
+        color="primary"
+        class="mt-2"
+        @click="updateone()"
+      >
+        updateone
+      </v-btn>
+      <v-btn
+        color="primary"
+        class="mt-2"
+        @click="updateid()"
+      >
+        updatewidthid
+      </v-btn>
     </div>
   </v-form>
   
@@ -43,7 +57,10 @@
 <script>
 
   
-import {getAll} from '@/controller/index'
+import {getAllgroup} from './group-post.controller'
+import {createNotId} from '@/controller/index'
+import {createWithId} from '@/controller/index'
+
 export default {
   name: "GroupPost",
   data: () => ({
@@ -73,10 +90,22 @@ export default {
     methods: {
       getAllss(){
         console.log('100')
-        getAll()
+        getAllgroup()
      
     
-       }
+       },
+       updateone(){
+         let a = {
+           ird:"hanh",
+           nm: 'tinh yeu'
+         }
+         
+       
+         createNotId(a)
+       },
+        updatewidthid(){
+          createWithId()
+        }
       }
 };
 </script>
