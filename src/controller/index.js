@@ -1,5 +1,5 @@
 
-import { collection, getDocs, setDoc, addDoc, doc } from 'firebase/firestore'
+import { collection, getDocs, setDoc, addDoc, doc, updateDoc } from 'firebase/firestore'
 import db from '@/fb'
 
 export const getAll = async({table}) => {   
@@ -11,14 +11,22 @@ export const getAll = async({table}) => {
 }
 export const createNotId = async() => {
      const dbRef = collection(db, 'group')
-      addDoc(dbRef, {anh: 'em'})
+   await    addDoc(dbRef, {anh: 'em'})
      // .then(() => console.log('thanh cong')).catch((e)=> {console.log(e)})
 }
+
 export const createWithId = async() => {
 
-     const dbRef = doc(db, 'group', 'jjrrj')
-      setDoc(dbRef, {toi: 'emkkk'}).then(hanh => {console.log(hanh)}).catch(err => console.log(err))
+     const dbRef = doc(db, 'group', 'hanh4')
+     await setDoc(dbRef, {kkkkottti: 'emkkk6666'}).then(()=> {console.log('hanh')}).catch(err => console.log(err))
      // .then(() => console.log('thanh cong')).catch((e)=> {console.log(e)})
+}
+ 
+ 
+
+export const updaterow = async() => {
+     const dbRef = doc(db, 'group', 'hanh4')
+     await updateDo(dbRef)
 }     
 // const citiesRef = db.collection('cities');
 

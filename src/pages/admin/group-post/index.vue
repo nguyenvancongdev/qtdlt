@@ -103,7 +103,7 @@ export default {
        
          createNotId(a)
        },
-        updatewidthid(){
+        updateid(){
           createWithId()
         }
       }
