@@ -1,5 +1,5 @@
 
-import { collection, getDocs, setDoc, addDoc, doc, updateDoc } from 'firebase/firestore'
+import { collection, getDocs, setDoc, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore'
 import db from '@/fb'
 
 export const getAll = async({table}) => {   
@@ -11,23 +11,31 @@ export const getAll = async({table}) => {
 }
 export const createNotId = async() => {
      const dbRef = collection(db, 'group')
-   await    addDoc(dbRef, {anh: 'em'})
+   await  addDoc(dbRef, {anh: 'em'})
      // .then(() => console.log('thanh cong')).catch((e)=> {console.log(e)})
 }
-
 export const createWithId = async() => {
-
      const dbRef = doc(db, 'group', 'hanh4')
      await setDoc(dbRef, {kkkkottti: 'emkkk6666'}).then(()=> {console.log('hanh')}).catch(err => console.log(err))
      // .then(() => console.log('thanh cong')).catch((e)=> {console.log(e)})
 }
- 
- 
 
 export const updaterow = async() => {
      const dbRef = doc(db, 'group', 'hanh4')
-     await updateDo(dbRef)
+     await updateDoc(dbRef, {toi: 'nho em'})
 }     
+
+export const deleterow = async({id}) => {
+     const docRef = doc(db, "cities", "yftq9RGp4jWNSyBZ1D6L");
+     deleteDoc(docRef).then(() => {
+          console.log("Entire Document has been deleted successfully."
+          )})
+.catch(error => {
+    console.log(error);
+})
+}
+
+
 // const citiesRef = db.collection('cities');
 
 // await citiesRef.doc('SF').set({
