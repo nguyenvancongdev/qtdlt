@@ -1,5 +1,5 @@
 
-import { collection, getDocs, setDoc, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore'
+import { collection, getDocs,getDoc, setDoc, addDoc, doc, updateDoc, deleteDoc, query, startAt, where, limit, getCountFromServer } from 'firebase/firestore'
 import db from '@/fb'
 
 export const getAll = async({table}) => {   
@@ -26,7 +26,7 @@ export const updaterow = async() => {
 }     
 
 export const deleterow = async({id}) => {
-     const docRef = doc(db, "cities", "yftq9RGp4jWNSyBZ1D6L");
+     const docRef = doc(db, "group", id);
      deleteDoc(docRef).then(() => {
           console.log("Entire Document has been deleted successfully."
           )})
@@ -34,8 +34,30 @@ export const deleterow = async({id}) => {
     console.log(error);
 })
 }
+export const getbyID = async({id}) => {
+     const docRef = doc(db, "group", id);
+     let a = await getDoc(docRef);
+     let b = {id: a.id, ...a.data()}   
+     console.log(b)
+}
 
+export const querylimit = async() => {
+     const dbRef = collection(db, 'group')
+     const q = query(dbRef, startAt(1), where('anh', 'in', 'em'), limit(20))
+     return q
+}
+export const getcoutet = async() => {
+     const dbRef = collection(db, 'group')
+     const couter =  getCountFromServer(dbRef).data().couter;
+     return couter
+}
+//nếu 
+// nếu không được thì mình có thể /
+// bắt đầu hiểu được rồi hehe:
+// mình phai test duọc
+// sau đó mình sẽ nhận về bản chụp nhanh và từ đó 
 
+// qery all data
 // const citiesRef = db.collection('cities');
 
 // await citiesRef.doc('SF').set({
